@@ -1,0 +1,75 @@
+body{
+	font-family: 微軟正黑體;
+}
+#sidebar_left,#sidebar_right,#content{
+    min-height:2066px;
+}
+h1 img{
+	height:45px;
+	vertical-align: top;
+}
+h1{
+	margin: 0;
+	padding: 20px 7%;
+}
+hr{
+	width: 88%;
+}
+p{
+	margin:0 6%;
+}
+h3{
+	font-style: italic;
+	margin: 3% 7%;
+}
+table{
+	border: 1px solid black;
+	width: 55%;
+	margin:0 7%;
+	padding: 0;
+}
+.reward tr th{
+	color: white;
+	background-color: rgba(154,74,74,1);
+}
+.reward{
+	column-width:40%;
+	column-count: 2;
+	column-fill: auto;
+}
+h3{
+	-webkit-column-break-before:always;
+}
+ul li{
+	line-height: 50px;
+	font-size: 20px;
+	list-style-position: inside;
+	margin:0 7%;
+}
+.club{
+	margin:2% 7%;
+	column-count: 2;
+}
+.one{
+	color: #376D8F;
+	font-size: 20px;
+	font-weight: bold;
+}
+.two{
+	text-indent: 1em;
+	font-weight: bold;
+}
+.three{
+	text-indent: 1em;
+}
+div #tea{
+	-webkit-column-break-before:always;
+}
+.club div{
+	padding: 1em;
+	border-bottom:1px dotted gray;
+}
+.club div p {
+	margin: 0;
+	padding:0;
+} 

@@ -1,0 +1,63 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.head_style{
+    vertical-align: middle;
+    line-height: 75px;
+    background-color:#BE9393;
+    color:white;
+    font-family:"微軟正黑體";
+    font-size:36px;
+    text-align:center;
+    height:75px;
+    border-bottom:#CFAFAF solid 1px;
+}
+.foot_style p{
+  margin:0;
+  padding: 0;
+}
+.foot_style{
+    background-color:#5B5858;
+    color:white;
+    text-align:center;
+    font-family:"微軟正黑體";
+    font-size:8px;
+    line-height:12px;
+}
+#sidebar_left{
+    background-image:
+    linear-gradient(to top, #DEAC62,#BE9393 );
+    width:5%;
+    min-height:866px;
+    text-align:center;
+    line-height:400px;
+    float:left;
+    border:#CFAFAF solid 1px;
+}
+#sidebar_right{
+    background-image:
+    linear-gradient(to top, #DEAC62,#BE9393 );
+    width:5%;
+    min-height:866px;
+    text-align:center;
+    line-height:400px;
+    float:right;
+    border:#CFAFAF solid 1px;
+}    
+#content{
+    background-image:
+    linear-gradient(to top, #F8CA84,#BE9393 );
+    min-height:866px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }

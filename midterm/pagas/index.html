@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset ="utf-8">
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/side_navigation.css">
+	<title>首頁</title>
+</head>
+<body>	
+	<div class="head_style">
+        中原大學合氣道社
+        <!--選單 起始-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                &times;
+            </a>
+            <a href="index.html">首頁</a>
+            <a href="about.html">關於我們</a>
+            <a href="club.html">社團介紹</a>
+            <a href="event.html">社團活動</a>
+            <a href="sheet.html">回饋表單</a>
+            <a href="video.html">影片宣傳</a>
+        </div>
+        <span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        <!--選單 終點-->
+    </div>
+	<!--左 Side Bar 格式-->
+    <div id="sidebar_left"></div>
+	<!--右 Side Bar 格式-->
+    <div id="sidebar_right"></div>
+	<!--內容格式設定-->
+	<div id="content">
+        <img src="../assets/picture/index.jpg">
+		<div id="btn">
+            <button onclick=window.location.href="about.html">
+                <span>About</span>
+                <div id="one">
+                    <p>組員簡介</p>
+                </div>
+            </button>
+            <button onclick=window.location.href="club.html">
+                <span>Club</span>
+                <div id="two">
+                    <p>社團介紹</p>
+                </div>
+            </button>
+            <button onclick=window.location.href="event.html">
+                <span>Event</span>
+                <div id="three">
+                    <p>社團活動</p>
+                </div>
+            </button>
+            <button onclick=window.location.href="sheet.html">
+                <span>Sheet</span>
+                <div id="four">
+                    <p>回饋表單</p>
+                </div>
+            </button>
+            <button onclick=window.location.href="video.html">
+                <span>Video</span>
+                <div id="five">
+                    <p>介紹影片</p>
+                </div>
+            </button>
+        </div>
+	</div>
+	<div class="foot_style">
+		<p>　</p>
+		<p>　第三組多媒體程式設計期中專案</p>
+		<p>　我們的聯絡方式:PING2111M8@GMAIL.COM</p>
+		<p>　</p>		
+	</div>
+</body>
+</html>

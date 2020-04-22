@@ -1,0 +1,122 @@
+﻿p{
+    margin: 0;
+    padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.head_style{
+    vertical-align: middle;
+    line-height: 75px;
+    background-color:#BE9393;
+    color:white;
+    font-family:"微軟正黑體";
+    font-size:36px;
+    text-align:center;
+    height:75px;
+    border-bottom:#CFAFAF solid 1px;
+}
+.foot_style p{
+  margin:0;
+  padding: 0;
+}
+.foot_style{
+    background-color:#5B5858;
+    color:white;
+    text-align:center;
+    font-family:"微軟正黑體";
+    font-size:8px;
+    line-height:12px;
+}
+    /*
+    DEAC62 = RGB(222,172,98)
+    BE9393 = RGB(190,147,147)
+    */
+#sidebar_left{
+    background-image:
+    linear-gradient(to top, #DEAC62,#BE9393 );
+    min-width:100px; 
+    width:5%;
+    min-height:1066px;
+    text-align:center;
+    line-height:400px;
+    float:left;
+}
+#content img{
+    height:600px;
+    opacity: 0.8;
+    height:600px;
+}
+#sidebar_right{
+    background-image:
+    linear-gradient(to top, #DEAC62,#BE9393 );
+    min-width:100px;
+    width:5%;
+    min-height:1066px;
+    text-align:center;
+    line-height:400px;
+    float:right;
+}
+#content{
+    background-image:
+    linear-gradient(to top, #DEAC62,#BE9393 );
+    min-height:1066px;
+    text-align:center;
+    line-height:200px;
+}
+#btn{
+    padding: 5% 0%;
+    line-height: 350%;
+    vertical-align: middle;
+    width:100%;
+    min-height:350%;
+    background:rgba(99,84,84,0.6);
+}
+#btn button{
+    border-radius: 10px;
+    border:1px solid #F9C161;
+    background:rgba(250,248,248,0);
+    color: #F9C161;
+    margin: 10px;
+    min-height: 200px;
+    width:13%;
+}
+#btn button span{
+    text-decoration: underline;
+    font-style: italic;
+    text-shadow: 3px 2px gray;
+    font-size: 45px;
+    font-family:'Yu Gothic Light';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+#btn button span:first-letter{
+    font-weight: bold;
+    font-size: 70px;
+    font-style: italic;
+}
+#btn button div{
+    font-family:'微軟正黑體';
+    line-height: 0px;
+    display: none;
+    text-decoration: none;
+}
+#btn button:hover #one,
+#btn button:hover #two,
+#btn button:hover #three,
+#btn button:hover #four,
+#btn button:hover #five{
+   font-style: normal;
+    color: white;
+    display: block;
+}
+#btn button:hover span{
+    display: none;
+}
+#btn button:hover{
+    border-radius: 20px;
+    border:3px solid #F9C161;
+    background:rgba(79,69,53,1);
+}
