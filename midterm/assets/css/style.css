@@ -6,6 +6,10 @@ body{
   margin: 0;
   padding: 0;
 }
+.head_style img{
+    vertical-align: middle;
+    height: 70px;
+}
 .head_style{
     vertical-align: middle;
     line-height: 75px;
@@ -38,7 +42,7 @@ body{
     linear-gradient(to top, #DEAC62,#BE9393 );
     min-width:100px; 
     width:5%;
-    min-height:1066px;
+    min-height:1200px;
     text-align:center;
     line-height:400px;
     float:left;
@@ -53,7 +57,7 @@ body{
     linear-gradient(to top, #DEAC62,#BE9393 );
     min-width:100px;
     width:5%;
-    min-height:1066px;
+    min-height:1200px;
     text-align:center;
     line-height:400px;
     float:right;
@@ -61,7 +65,7 @@ body{
 #content{
     background-image:
     linear-gradient(to top, #DEAC62,#BE9393 );
-    min-height:1066px;
+    min-height:1200px;
     text-align:center;
     line-height:200px;
 }
@@ -116,7 +120,13 @@ body{
     display: none;
 }
 #btn button:hover{
+    font-size: 28px;
     border-radius: 20px;
     border:3px solid #F9C161;
     background:rgba(79,69,53,1);
+}
+.index{
+    color:white;
+    text-decoration: none;
+
 }

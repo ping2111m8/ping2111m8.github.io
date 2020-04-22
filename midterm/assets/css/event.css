@@ -2,8 +2,8 @@ body{
 	font-family: 微軟正黑體;
 }
 #sidebar_left,#sidebar_right,#content{
-    min-height:2066px;
-}
+    min-height:2000px;
+} 
 h1 img{
 	height:45px;
 	vertical-align: top;
@@ -33,7 +33,7 @@ table{
 	background-color: rgba(154,74,74,1);
 }
 .reward{
-	column-width:40%;
+	columns-width:40%;
 	column-count: 2;
 	column-fill: auto;
 }
@@ -73,3 +73,8 @@ div #tea{
 	margin: 0;
 	padding:0;
 } 
+.people{
+	columns-width:40%;
+	column-count: 2;
+	column-fill: auto;
+}

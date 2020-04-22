@@ -1,0 +1,25 @@
+#sidebar_left,#sidebar_right,#content{
+    min-height:1300px;
+} 
+p{
+	padding:0 7%;
+}
+#imgw{
+	margin: 0 20px;
+}
+.title{
+	font-size:25px;
+	color:#4D1F00;
+	font-weight: bold;
+	margin: 10px 0;
+}
+.ping{
+    height:15px;
+    vertical-align: middle;
+}
+.class{
+	padding: 20px;
+	height: 120px;
+	margin: 0 60% 0 7%;
+	border: brown double 5px;
+}

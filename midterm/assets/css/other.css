@@ -3,17 +3,22 @@
     padding: 0;
 }
 body{
+    font-family: 微軟正黑體;
     background-image:
     linear-gradient(to top, #DEAC62,#BE9393 );
     margin: 0;
     padding: 0;
 }
+.head_style img{
+    vertical-align: middle;
+    height: 70px;
+}
 .head_style{
+    font-family: 微軟正黑體;
     vertical-align: middle;
     line-height: 75px;
     background-color:#BE9393;
     color:white;
-    font-family:"微軟正黑體";
     font-size:36px;
     text-align:center;
     height:75px;
@@ -24,10 +29,10 @@ body{
   padding: 0;
 }
 .foot_style{
+    font-family: 微軟正黑體;
     background-color:#5B5858;
     color:white;
     text-align:center;
-    font-family:"微軟正黑體";
     font-size:8px;
     line-height:12px;
 }
@@ -39,7 +44,6 @@ body{
     text-align:center;
     line-height:400px;
     float:left;
-    border:#CFAFAF solid 1px;
 }
 #sidebar_right{
     background-image:
@@ -49,12 +53,26 @@ body{
     text-align:center;
     line-height:400px;
     float:right;
-    border:#CFAFAF solid 1px;
 }    
 #content{
+
     background-color:rgba(255,255,255,0.5); 
     min-height:866px;
 }
 #imgw{
     position:relative;
+}
+h1 img{
+    height:45px;
+    vertical-align: top;
+}
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 20px 7%;
+}
+.index{
+    color:white;
+    text-decoration: none;
+
 }
