@@ -62,9 +62,6 @@ ul li{
 .three{
 	text-indent: 1em;
 }
-div #tea{
-	-webkit-column-break-before:always;
-}
 .club div{
 	padding: 1em;
 	border-bottom:1px dotted gray;
