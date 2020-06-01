@@ -1,0 +1,118 @@
+/*通用設定*/
+*{
+    margin: 0;
+    padding: 0;
+}
+#header {
+    height: 70px;
+    background: #D29D00;
+}
+#Main {
+    padding-bottom: 50px;
+}
+#footer {
+    height: 50px;
+    background: #C4C4C4;
+    position: relative;
+    margin-top: -50px;
+}
+#headset{
+    float: right;
+    width: 420px;
+}
+#A{
+    float: right;
+    height: 28px;
+}
+#B ul li {
+    display:inline;
+    float: right;
+    padding: 10px;
+    font-family: "微軟正黑體";
+}
+#footer_p {
+    height: 50px;
+    font-family: "微軟正黑體";
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+}
+#login_logout {
+    float: right;
+    height: 28px;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-family: "微軟正黑體";
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFED97;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.menu_click{
+    position: absolute;
+    left: 10px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: black;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: black;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+#main {
+    transition: margin-right .5s;
+    padding: 20px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+section{
+    height: 800px;
+    background-color: #FFF5C1;
+}
+aside{
+    height: 800px;
+    background-color: #FFED97;
+    float: right;
+    width: 200px;
+}
+nav{
+    height: 800px;
+    background-color: #FFED97;
+    float: left;
+    width: 200px;
+}
+#nav_div{
+    width: 100%;
+    height: 700px;
+    position: sticky;
+    position: -webkit-sticky;
+    float: right;
+    top: 0px;
+    font-family: UD DIGI kyokasho NK-R, 'Times New Roman', Times, serif;
+    float: center;
+    text-align: center;
+    font-size: 18px;
+    font-family: "微軟正黑體";
+}
+/*通用設定*/

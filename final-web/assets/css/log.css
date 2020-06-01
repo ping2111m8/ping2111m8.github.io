@@ -1,0 +1,78 @@
+#white-background{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fefefe;
+    opacity: 0.7;
+    z-index: 9999;
+}
+#dlgbox{
+    /*initially dialog box is hidden*/
+    display: none;
+    position: fixed;
+    width: 480px;
+    z-index: 9999;
+}
+#dlg-header{
+    background-color: #D29D00;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
+}            
+#dlg-body{
+    background-color: #FFED97;
+    background-image: url(img-64x64.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 20px;
+    color: black;
+    font-size: 14px;
+    padding: 1px 4px 4px 80px;
+    margin: 0px 10px 0px 10px;
+    overflow: hidden;
+}      
+#dlg-footer{
+    background-color: #FFED97;
+    text-align: right;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+}
+#dlg-footer button{
+    background-color: #6d84b4;
+    color: #FFED97;
+    width: 20%;
+    padding: 5px;
+    border: 0px;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0%;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+.close:hover.close:focus {
+    color: cursor pointer;
+}
+#button_in {
+    border: solid #D29D00;
+    background-color: #D29D00;
+}
+#color-set {
+    background-color: #301C10;
+    color: white;
+}
+#text-set3 {
+    font-size: 35px;
+    font-family: "標楷體";
+}
+#table-set {
+    position: absolute;
+    left: 25%;
+}

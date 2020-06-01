@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+<head>
+	<title>杯可Backer</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+	<header id="header">
+		<div id="headset">
+			<div id="login_logout">
+				<form name="login" action="#">
+					<a href="#" style="color:black;">登入</a> / <a href="#" style="color:black;">登出</a>
+				</form>
+			</div>
+			<div id="A">
+				<div id="B">
+					<ul>
+						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
+						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
+						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
+						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../pages/list.html"><p>商品列表</p></a>
+			<a href="../pages/hot.html"><p>熱門排行</p></a>
+			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/cart.html"><p>購 物 車</p></a>
+			<a href="../pages/about.html"><p>關於我們</p></a>
+		</div>
+		<span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
+		<script>
+		function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+		function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+		</script>
+	</header>
+	<section>
+		<aside></aside>
+		<nav>
+			<div id="nav_div">
+				<ul>
+					<li><a href="#" style="color:black">餅乾1</a></li>
+					<li><a href="#" style="color:black">餅乾2</a></li>
+					<li><a href="#" style="color:black">餅乾3</a></li>
+					<li><a href="#" style="color:black">餅乾4</a></li>
+					<li><a href="#" style="color:black">餅乾5</a></li>
+					<li><a href="#" style="color:black">餅乾6</a></li>
+					<li><a href="#" style="color:black">蛋糕1</a></li>
+					<li><a href="#" style="color:black">蛋糕2</a></li>
+					<li><a href="#" style="color:black">蛋糕3</a></li>
+					<li><a href="#" style="color:black">蛋糕4</a></li>
+					<li><a href="#" style="color:black">蛋糕5</a></li>
+					<li><a href="#" style="color:black">蛋糕6</a></li>
+				</ul>
+			</div>
+		</nav>
+		<article></article>
+	</section>
+	<footer id="footer">
+		<div id="footer_p">
+			<p>Copyright © 2020 Tsai, Ping-Hung & Hou,Chia-Shen</p>
+			<p>人數統計 999人 </p>
+		</div>
+	</footer>
+</body>
+</html>

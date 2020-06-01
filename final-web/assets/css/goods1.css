@@ -1,0 +1,28 @@
+.first {
+    float: right;
+    min-width: 800px;
+    width: 100%;
+}
+.picture {
+    float: right;
+    min-width: 400px;
+    width: 50%;
+}
+.first_left {
+    float: right;
+    min-width: 400px;
+    height: 410px;
+    width: 50%;
+}
+.second {
+    float: right;
+    min-width: 800px;
+    height: 410px;
+    width: 100%;
+}
+.third {
+    float: right;
+    min-width: 800px;
+    height: 410px;
+    width: 100%;
+}

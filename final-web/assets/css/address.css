@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+#form {
+    width:600px;
+    height:auto;
+    overflow:hidden;
+    background:white;
+    border-radius:10px;
+}
+form input,form select{
+    float:left;
+}
+form input ,form select {
+    border-radius:5px;
+    height:30px;
+    font-size: 18px;
+    font-family: "微軟正黑體";
+    line-height: 20px;
+    margin-right: 5px;
+}
+form input[type="text"] ,form input[type="number"]{
+    outline:none;
+    border:1px solid #bbb;
+    border-radius:5px;
+    height:30px;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size: 18px;
+    font-family: "微軟正黑體";
+    line-height: 20px;
+}
+input[type=submit] {
+    width: 70px;
+    background:#999;
+    border:none;
+    color:white;
+}
+#posit{
+    padding-top: 30px;
+}
+#posit2{
+    margin-left: 265px;
+}
+table{
+    margin-top: 30px
+}

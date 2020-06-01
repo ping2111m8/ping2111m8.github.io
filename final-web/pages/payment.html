@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+<head>
+	<title>杯可Backer</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/address.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+</head>
+<body>
+	<div id="Main">
+		<header id="header">
+			<div id="headset">
+				<div id="login_logout">
+					<form name="login" action="#">
+						<script> 
+						function showDialog(){
+							var whitebg = document.getElementById("white-background");
+							var dlg = document.getElementById("dlgbox");
+							whitebg.style.display = "block";
+							dlg.style.display = "block";
+							var winWidth = window.innerWidth;
+							var winHeight = window.innerHeight;
+							dlg.style.left = (winWidth/2) - 480/2 + "px";
+							dlg.style.top = "150px";
+						}
+						function closeDialog(){
+							var whitebg = document.getElementById("white-background");
+							whitebg.style.display = "none";
+							var dlg = document.getElementById("dlgbox");
+							dlg.style.display="none";
+						}
+						</script>
+						<button id="button_in" onclick="showDialog()">登入 / 註冊</button>
+						<div id="white-background"><!--登入--></div>
+						<div id="dlgbox">
+							<div id="dlg-header">登入
+								<h3 onclick="closeDialog()" title="關閉視窗" class="close">x</h3>
+							</div>
+							<div id="dlg-body"><br/>
+								帳號：<input type="text" name="id_number" value="" placeholder=""> <br/><br/>
+								密碼：<input type="password" name="password" value="" placeholder=""><br/><br/>
+							</div>
+							<div id="dlg-footer">
+								<input type="button" name="login" value="登入">
+								<input type="button" name="enroll" value="註冊">
+							</div>
+						</div><!--登入end-->
+						<div id="white-background"><!--登入介面始--></div>
+							<div id="dlgbox">
+							<div id="dlg-header">登入
+								<a href="index.html" title="關閉視窗" class="close"><input type="button" name="" value="×"></a>
+							</div>
+							<div id="dlg-body"><br/>
+								帳號：<input type="text" name="id_number"> <br/>
+								密碼：<input type="password" name="password"><br/>
+							</div>
+							<div id="dlg-footer">
+								<input type="button" name="login" value="登入">
+								<input type="button" name="enroll" value="註冊">
+							</div>
+						</div><!--登入介面終-->
+					</form>
+				</div>
+				<div id="A">
+					<div id="B">
+						<ul>
+							<li><a href="list.html" style="color:black;"><p>商品列表</p></a></li>
+							<li><a href="hot.html" style="color:black;"><p>熱門排行</p></a></li>
+							<li><a href="hope.html" style="color:black;"><p>願望清單</p></a></li>
+							<li><a href="cart.html" style="color:black;"><p>購 物 車</p></a></li>
+							<li><a href="about.html" style="color:black;"><p>關於我們</p></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="list.html"><p>商品列表</p></a>
+				<a href="hot.html"><p>熱門排行</p></a>
+				<a href="hope.html"><p>願望清單</p></a>
+				<a href="cart.html"><p>購 物 車</p></a>
+				<a href="about.html"><p>關於我們</p></a>
+			</div>
+			<span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
+			<script>
+			function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+			function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+			</script>
+		</header>
+		<section>
+			<aside></aside>
+			<nav></nav>
+			<article>
+				<div id="posit">
+					<form name="form_pay"  id="form" action="mailto:ping2111m8@gmail.com" method="post" enctype="text/plain" onSubmit="return checkform(this)">
+						<table>
+							<tr>
+								<th width="90px"><p>收件人：</p></th>
+								<td colspan="4"><input id="post" type ="text" name="name"  placeholder="小猴猴"></td>
+							</tr>
+							<tr>
+								<th><p>收件地址：</p></th>
+								<td width="600px" colspan="5"><div id="twzipcode"></div><input id="post" type ="text" name="street"  placeholder="中正路1號"></td>
+							</tr>
+							<tr>
+								<th><p>連絡電話：</p></th>
+								<td colspan="4"><input type="number" name="phone" placeholder="0912345678"></td>
+							</tr>
+							<tr>
+								<th><p>付款方式：</p></th>
+								<td><input type="radio" name="payment" value="Cash" id="pay1"><label for="pay1"><img src="../assets/pic/icon/cash.png" width="50px" title="貨到付款"></label></td>
+								<td><input type="radio" name="payment" value="ATM" id="pay2"><label for="pay2"><img src="../assets/pic/icon/ATM.png" width="50px" title="ATM轉帳"></label></td>
+								<td><input type="radio" name="payment" value="Card" id="pay3"><label for="pay3"><img src="../assets/pic/icon/card.png" width="50px" title="信用卡"></label></td>
+								<td><input type="radio" name="payment" value="Paypal" id="pay4"><label for="pay4"><img src="../assets/pic/icon/Paypal.png" width="50px" title="Paypal"></label></td>
+							</tr>
+							<tr><td colspan="5"><input id="posit2" type ="submit" value ="確認"></td></tr>
+						</table>
+					</form>
+					<script>
+					$("#twzipcode").twzipcode({
+						zipcodeIntoDistrict: true,
+						countyName: "City",
+						districtName: "District"
+					});
+					</script>
+				</div>
+			</article>
+		</section>
+	</div>
+	<footer id="footer">
+		<div id="footer_p">
+			<p>Copyright © 2020 Tsai, Ping-Hung & Hou,Chia-Shen</p>
+			<p>人數統計 999人 </p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+<head>
+	<title>杯可Backer</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+  	<link rel="stylesheet" type="text/css" href="../assets/css/about.css">
+  	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+</head>
+<body>
+	<header id="header">
+		<div id="headset">
+			<div id="login_logout">
+				<form name="login" action="#">
+					<script> 
+					function showDialog(){
+						var whitebg = document.getElementById("white-background");
+						var dlg = document.getElementById("dlgbox");
+						whitebg.style.display = "block";
+						dlg.style.display = "block";
+						var winWidth = window.innerWidth;
+						var winHeight = window.innerHeight;
+						dlg.style.left = (winWidth/2) - 480/2 + "px";
+						dlg.style.top = "150px";
+					}
+					function closeDialog(){
+						var whitebg = document.getElementById("white-background");
+						whitebg.style.display = "none";
+						var dlg = document.getElementById("dlgbox");
+						dlg.style.display="none";
+					}
+					</script>
+					<button id="button_in" onclick="showDialog()">登入 / 註冊</button>
+					<div id="white-background"><!--登入--></div>
+					<div id="dlgbox">
+						<div id="dlg-header">登入
+							<h3 onclick="closeDialog()" title="關閉視窗" class="close">x</h3>
+						</div>
+						<div id="dlg-body"><br/>
+							帳號：<input type="text" name="id_number" value="" placeholder=""> <br/><br/>
+							密碼：<input type="password" name="password" value="" placeholder=""><br/><br/>
+						</div>
+						<div id="dlg-footer">
+							<input type="button" name="login" value="登入">
+							<input type="button" name="enroll" value="註冊">
+						</div>
+					</div><!--登入end-->
+					<div id="white-background"><!--登入介面始--></div>
+						<div id="dlgbox">
+						<div id="dlg-header">登入
+							<a href="index.html" title="關閉視窗" class="close"><input type="button" name="" value="×"></a>
+						</div>
+						<div id="dlg-body"><br/>
+							帳號：<input type="text" name="id_number"> <br/>
+							密碼：<input type="password" name="password"><br/>
+						</div>
+						<div id="dlg-footer">
+							<input type="button" name="login" value="登入">
+							<input type="button" name="enroll" value="註冊">
+						</div>
+					</div><!--登入介面終-->
+				</form>
+			</div>
+			<div id="A">
+				<div id="B">
+					<ul>
+						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
+						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
+						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
+						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../pages/list.html"><p>商品列表</p></a>
+			<a href="../pages/hot.html"><p>熱門排行</p></a>
+			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/cart.html"><p>購 物 車</p></a>
+			<a href="../pages/about.html"><p>關於我們</p></a>
+		</div>
+		<span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
+		<script>
+			function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+			function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+		</script>
+	</header>
+	<section>
+		<aside></aside>
+		<nav>
+			<div id="nav_div"></div>
+		</nav>
+		<article>
+			<table class="table">
+				<div class="article_title">關於我們
+					<tr>
+						<td>
+							<div class="person">
+								<img src="../assets/pic/img/ch.jpg" class="about">
+								<h1>戴彥綸</h1>
+								<p>資管二甲 10744118</p>
+								<p class="title">工作:網頁後端</p>
+								<p>聯絡方式:</p>
+								<table>
+									<tr>
+										<td><a href="https://www.facebook.com/profile.php?id=100002841323861"><img src="../assets/pic/icon/fb.jpg"></a></td>
+										<td><a href="https://www.instagram.com/jerem_0826/?hl=zh-tw"><img src="../assets/pic/icon/ig.jpg"></a></td>
+									</tr>
+								</table>
+								<a href="mailto:jeremy641@gmail.com"><p><button>EMAIL</button></p></a>
+							</div>       
+						</td>
+						<td>
+							<div class="person">
+								<img src="../assets/pic/img/chen.jpg" class="about">
+								<h1>陳愷文</h1>
+								<p>資管二甲10727201</p>
+								<p class="title">工作:網頁後端</p>
+								<p>聯絡方式:</p>
+								<table>
+									<tr>
+										<td><a href="https://www.facebook.com/chen.kevin.750/"><img src="../assets/pic/icon/fb.jpg"></a></td>
+										<td><a href="https://www.instagram.com/kevin.chen.880924/?hl=zh-tw"><img src="../assets/pic/icon/ig.jpg"></a></td>
+									</tr>
+								</table>
+								<a href="mailto:s10727201@cycu.org.tw"><p><button>EMAIL</button></p></a>
+							</div>       
+						</td>
+						<td>
+							<div class="person">
+								<img src="../assets/pic/img/l.jpg" class="about">
+								<h1>侯家燊</h1>
+								<p>資管二乙10740135</p>
+								<p class="title">工作:網頁前端</p>
+								<p>聯絡方式:</p>
+								<table>
+									<tr>
+										<td><a href="https://www.facebook.com/profile.php?id=100007164345956&ref=bookmarks"><img src="../assets/pic/icon/fb.jpg"></a></td>
+										<td><a href="http://instagram.com/ethanhou_880913"><img src="../assets/pic/icon/ig.jpg"></a></td>
+									</tr>
+								</table>
+								<a href="ethanhou19990913@gmail.com"><p><button>EMAIL</button></p></a>
+							</div>
+						</td>
+						<td>
+							<div class="person">
+								<img src="../assets/pic/img/pin.jpg" class="about">
+								<h1>蔡秉宏</h1>
+								<p>資管二乙10744228</p>
+								<p class="title">工作:網頁前端</p>
+								<p>聯絡方式:</p>
+								<table>
+									<tr>
+										<td><a href="https://www.facebook.com/pinghung.tais"><img src="../assets/pic/icon/fb.jpg"></a></td>
+										<td><a href="https://www.instagram.com/ping2111m8/"><img src="../assets/pic/icon/ig.jpg"></a></td>
+									</tr>
+								</table>
+								<a href="mailto:ping2111m8@gmail.com"><p><button>EMAIL</button></p></a>
+							</div>
+						</td>
+					</tr>
+				</div>
+			</table>
+		</article>
+	</section>
+	<footer id="footer">
+		<div id="footer_p">
+			<p>Copyright © 2020 Tsai, Ping-Hung & Hou,Chia-Shen</p>
+			<p>人數統計 999人 </p>
+		</div>
+	</footer>
+</body>
+</html>
