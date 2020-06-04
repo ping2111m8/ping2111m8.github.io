@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: UD DIGI kyokasho NK-R, '微軟正黑體','Times New Roman', Times, serif;
+}
+@font-face {
+    font-family: UD DIGI kyokasho NK-R;
+    src: url("UDDigiKyokashoN-R.ttc");
+}
 body{
     background-color: rgba(0, 0, 0,.2);
 }
@@ -35,17 +44,22 @@ body{
     margin-left: 100px;
     margin-top: 20px;
 } 
-.btn btn-primary
-{
+.btn btn-primary{
    position:absolute;
    right:5px;
    bottom:5px;
 }
-div.article_title
-{
+div.article_title{
     font-size: 36px;
-    font-family: "微軟正黑體";
     text-align: center;
     padding: 15px;
-    
+}
+#submit-set {
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(243,152,0);
+    height: 35px;
+    width: 60px;
+    font-size: 16px;
+    color: white;
 }

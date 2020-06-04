@@ -4,24 +4,62 @@
 <head>
 	<title>杯可Backer</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/cart.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/cart.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
 </head>
 <body>
+	<script>
+		$(function (){
+			$('.change a').click(function (){
+				$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+			});
+		})
+		function start() {
+			document.getElementById('signform').style.display=""
+		}
+		function signclose() {
+			document.getElementById('signform').style.display="none"
+			document.getElementById('registerform').style.display="none"
+		}
+		function loading() {
+			document.getElementById('registerloading').style.display=""
+		}
+	</script>
 	<header id="header">
 		<div id="headset">
 			<div id="login_logout">
-				<form name="login" action="#">
-					<a href="#" style="color:black;">登入</a> / <a href="#" style="color:black;">登出</a>
-				</form>
+				<div>
+					<button id="displaysign" onclick="start()">登入/註冊</button>
+				</div>
+				<div class="signform" id="signform" style="display: none">
+					<div class="signclose">
+						<a onclick="signclose()">關閉</a>
+					</div>
+					<form action="#" method="post">
+						<div class="userdiv">
+							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" >
+						</div>
+						<div class="pwddiv">
+							<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
+						</div>
+						<div class="postdiv">
+							<button>登入</button><br>
+						</div><br>
+					</form>
+					<div class="change" style="color: #4d4d4d">
+						<a href="register.html" style="text-decoration: none;">註冊</a>
+					</div>
+				</div>
 			</div>
 			<div id="A">
 				<div id="B">
 					<ul>
-						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
-						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
-						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
-						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+						<li><a href="../pages/list.html" style="text-decoration:none;color:black;"><p>商品列表</p></a></li>
+						<li><a href="../pages/hot.html" style="text-decoration:none;color:black;"><p>熱門排行</p></a></li>
+						<li><a href="../pages/hope.html" style="text-decoration:none;color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/cart.html" style="text-decoration:none;color:black;"><p>購 物 車</p></a></li>
+						<li><a href="../pages/about.html" style="text-decoration:none;color:black;"><p>關於我們</p></a></li>
 					</ul>
 				</div>
 			</div>
@@ -43,47 +81,44 @@
 	<section>
 		<aside></aside>
 		<nav>
-			<div id="nav_div">
-				
-			</div>
+			<div id="nav_div"></div>
 		</nav>
-        
 		<article>
-<div class="article_title">購物車</div>
-    <div id="app">
-        <div class="container">
-            <div class="item_header">
-                <div class="item_detail">商品</div>
-                <div class="price">單價</div>
-                <div class="count">數量</div> 
-                <div class="amount">總計</div>
-                <div class="operate">操作</div>
-            </div>
-            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
-                    <div class="item_header item_body">
-                            <div class="item_detail">
-                                <img width="80px" height="80px" src="../assets/pic/goods/1.jpg">
-                                <div class="name">75% 摩卡生巧乳酪</div>
-                            </div>
-                            
-                            <div class="price"><span>$</span>95</div>
-                            <div class="count">
-                                <button @click="handleSub(item)">-</button>
-                                1
-                                <button @click="handlePlus(item)">+</button>
-                            </div> 
-                            <div class="amount">999</div>
-                            <div class="operate">
-                                <button @click="handledelete(index)">刪除</button>
-                            </div>
-                    </div>
-            </div>
-
-            <input type="submit" value="去結算" class="btn btn-primary" ></button>
-        </div>
-    </div>
-
-</section>
+			<div class="article_title">購物車</div>
+			<div id="app">
+				<div class="container">
+					<div class="item_header">
+						<div class="item_detail">商品</div>
+						<div class="price">單價</div>
+						<div class="count">數量</div> 
+						<div class="amount">總計</div>
+						<div class="operate">操作</div>
+					</div>
+					<div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+						<div class="item_header item_body">
+							<div class="item_detail">
+								<img width="80px" height="80px" src="../assets/pic/goods/1.jpg">
+								<div class="name">75% 摩卡生巧乳酪</div>
+							</div>	
+							<div class="price"><span>$</span>95</div>
+							<div class="count">
+								<button @click="handleSub(item)" style="width: 20px;height: 20px;">-</button>
+								<label>1</label>
+								<button @click="handlePlus(item)" style="width: 20px;height: 20px;">+</button>
+							</div> 
+							<div class="amount">
+								<label>=單價*數量</label>
+							</div>
+							<div class="operate">
+								<button @click="handledelete(index)" id="submit-set">刪除</button>
+							</div>
+						</div>
+					</div>
+					<input style="float: right;margin-top: 10px;margin-right: 20px;" type="submit" value="去結算" class="btn btn-primary" id="submit-set"></button>
+				</div>
+			</div>
+		</article>
+	</section>
 	<footer id="footer">
 		<div id="footer_p">
 			<p>Copyright © 2020 Tsai, Ping-Hung & Hou,Chia-Shen</p>

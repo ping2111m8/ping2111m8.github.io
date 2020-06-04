@@ -1,3 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: UD DIGI kyokasho NK-R, '微軟正黑體','Times New Roman', Times, serif;
+}
+@font-face {
+  font-family: UD DIGI kyokasho NK-R;
+  src: url("UDDigiKyokashoN-R.ttc");
+}
 body {
   background-color: #FBFFF9;
 }
@@ -34,17 +43,16 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 .person table {
-    text-align: center;
-    margin: auto;
-    width: 40px;
-    height: 40px;
-    margin: auto;
+  text-align: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  margin: auto;
 }
 div.article_title {
-    font-size: 36px;
-    font-family: "微軟正黑體";
-    text-align: center;
-    padding: 15px;
+  font-size: 36px;
+  text-align: center;
+  padding: 15px;
 }
 .table {
   position: absolute;
