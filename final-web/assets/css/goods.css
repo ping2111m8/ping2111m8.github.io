@@ -94,17 +94,17 @@
     .sidenav a {font-size: 18px;}
 }
 section{
-    height: 1200px;/*頁面高度*/
+    height: 130vh;/*頁面高度*/
     background-color: #FFF5C1;
 }
 aside{
-    height: 1200px;/*頁面高度*/
+    height: 130vh;/*頁面高度*/
     background-color: #FFED97;
     float: right;
     width: 200px;
 }
 nav{
-    height: 1200px;/*頁面高度*/
+    height: 130vh;/*頁面高度*/
     background-color: #FFED97;
     float: left;
     width: 215px;
@@ -122,15 +122,6 @@ nav{
     font-size: 18px;
 }
 /*通用設定*/
-table {
-    border: 0;
-    border-radius: 5px;
-    min-width: 300px;
-    font-family: UD DIGI kyokasho NK-R, 'Times New Roman', Times, serif;
-    float: center;
-    text-align: center;
-    font-size: 18px;
-}
 .first {
     position: relative;
     height: 410px;
@@ -210,7 +201,6 @@ textarea {
     border-radius: 10px;
     width: 550px;
     height: 120px;
-
     font-size: 25px;
 }
 #table-set {
@@ -218,4 +208,5 @@ textarea {
     padding-top: 5px;
     min-width: 400px;
     text-align: left;
+    width: 100vh;
 }

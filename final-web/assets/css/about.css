@@ -10,6 +10,15 @@
 body {
   background-color: #FBFFF9;
 }
+#Main {
+  padding-bottom: 50px;
+}
+#footer {
+  height: 50px;
+  background: #C4C4C4;
+  position: relative;
+  margin-top: -50px;
+}
 .person {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -57,4 +66,13 @@ div.article_title {
 .table {
   position: absolute;
   left: 23%;
+}
+#A1{
+  float: right;
+  height: 28px;
+}
+#B1 ul li {
+  display:inline;
+  float: right;
+  padding: 10px;
 }
