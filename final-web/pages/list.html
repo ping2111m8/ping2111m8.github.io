@@ -10,8 +10,8 @@
 </head>
 <body>
 	<script>
-	$(function (){
-		$('.change a').click(function (){
+	$(function () {
+		$('.change a').click(function () {
 			$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
 		});
 	})
@@ -38,7 +38,7 @@
 					</div>
 					<form action="#" method="post">
 						<div class="userdiv">
-							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" >
+							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" onkeyup="value=value.replace(/[\W]/g,'') ">
 						</div>
 						<div class="pwddiv">
 							<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd">
@@ -57,7 +57,7 @@
 					<ul>
 						<li><a href="../pages/list.html" style="text-decoration:none;color:black;"><p>商品列表</p></a></li>
 						<li><a href="../pages/hot.html" style="text-decoration:none;color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="text-decoration:none;color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/hope.html" style="text-decoration:none;color:black;"><p>會員專區</p></a></li>
 						<li><a href="../pages/cart.html" style="text-decoration:none;color:black;"><p>購 物 車</p></a></li>
 						<li><a href="../pages/about.html" style="text-decoration:none;color:black;"><p>關於我們</p></a></li>
 					</ul>
@@ -68,7 +68,7 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="../pages/list.html"><p>商品列表</p></a>
 			<a href="../pages/hot.html"><p>熱門排行</p></a>
-			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/hope.html"><p>會員專區</p></a>
 			<a href="../pages/cart.html"><p>購 物 車</p></a>
 			<a href="../pages/about.html"><p>關於我們</p></a>
 		</div>
@@ -167,6 +167,15 @@
 					<td><a href="10.html" style="text-decoration:none;color:black;">NT.100</a></td>
 					<td><a href="11.html" style="text-decoration:none;color:black;">NT.130</a></td>
 					<td><a href="12.html" style="text-decoration:none;color:black;">NT.130</a></td>
+				</tr>
+				<tr>
+					<td id="color-set"><a href="10.html" style="text-decoration:none;color:white;">黑芝麻手工餅乾</a></td>
+				</tr>
+				<tr>
+					<td><a href="10.html"><img src="../assets/pic/goods/10.jpg" width ="200px"></a></td>
+				</tr>
+				<tr>
+					<td><a href="10.html" style="text-decoration:none;color:black;">NT.100</a></td>
 				</tr>
 			</table>
 		</article>

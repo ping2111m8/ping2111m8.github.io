@@ -7,6 +7,28 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/cart.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<style>
+		.qty {
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			border: 0;
+			border: 1px solid #aaa;
+		}
+		input.qtyplus {
+			width: 20px;
+			height: 20px;
+			border: 1px solid #aaa;
+			background: #f8f8f8;
+		}
+		input.qtyminus {
+			width: 20px;
+			height: 20px;
+			border: 1px solid #aaa;
+			background: #f8f8f8;
+		}
+	</style>
 </head>
 <body>
 	<script>
@@ -57,7 +79,7 @@
 					<ul>
 						<li><a href="../pages/list.html" style="text-decoration:none;color:black;"><p>商品列表</p></a></li>
 						<li><a href="../pages/hot.html" style="text-decoration:none;color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="text-decoration:none;color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/hope.html" style="text-decoration:none;color:black;"><p>會員專區</p></a></li>
 						<li><a href="../pages/cart.html" style="text-decoration:none;color:black;"><p>購 物 車</p></a></li>
 						<li><a href="../pages/about.html" style="text-decoration:none;color:black;"><p>關於我們</p></a></li>
 					</ul>
@@ -68,14 +90,14 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="../pages/list.html"><p>商品列表</p></a>
 			<a href="../pages/hot.html"><p>熱門排行</p></a>
-			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/hope.html"><p>會員專區</p></a>
 			<a href="../pages/cart.html"><p>購 物 車</p></a>
 			<a href="../pages/about.html"><p>關於我們</p></a>
 		</div>
 		<span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
 		<script>
-		function openNav() {document.getElementById("mySidenav").style.width = "250px";}
-		function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+			function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+			function closeNav() {document.getElementById("mySidenav").style.width = "0";}
 		</script>
 	</header>
 	<section>
@@ -100,14 +122,18 @@
 								<img width="80px" height="80px" src="../assets/pic/goods/1.jpg">
 								<div class="name">75% 摩卡生巧乳酪</div>
 							</div>	
-							<div class="price"><span>$</span>95</div>
-							<div class="count">
-								<button @click="handleSub(item)" style="width: 20px;height: 20px;">-</button>
-								<label>1</label>
-								<button @click="handlePlus(item)" style="width: 20px;height: 20px;">+</button>
-							</div> 
+							<div class="price">$95</div>
+							<form id='myform' method='POST' action='#' style="width: 22vh;">
+								<input type='button' value='-' class='qtyminus' field='quantity' />
+								<input type='text' name='quantity' value='1' class='qty' />
+								<input type='button' value='+' class='qtyplus' field='quantity' />
+							</form>
 							<div class="amount">
-								<label>=單價*數量</label>
+								<label>
+									<script>
+										document.write("95");
+									</script>
+								</label>
 							</div>
 							<div class="operate">
 								<button @click="handledelete(index)" id="submit-set">刪除</button>
@@ -119,6 +145,32 @@
 			</div>
 		</article>
 	</section>
+	<script>
+        $(function() {
+            $('.qtyplus').click(function(e) {
+                e.preventDefault();
+                fieldName = $(this).attr('field');
+                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                if (!isNaN(currentVal)) {
+                    $('input[name=' + fieldName + ']').val(currentVal + 1);
+                } 
+                else {
+                    $('input[name=' + fieldName + ']').val(0);
+                }
+            });
+            $(".qtyminus").click(function(e) {
+                e.preventDefault();
+                fieldName = $(this).attr('field');
+                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                if (!isNaN(currentVal) && currentVal > 0) {
+                    $('input[name=' + fieldName + ']').val(currentVal - 1);
+                } 
+                else {
+                    $('input[name=' + fieldName + ']').val(0);
+                }
+            });
+        });
+    </script>
 	<footer id="footer">
 		<div id="footer_p">
 			<p>Copyright © 2020 Tsai, Ping-Hung & Hou,Chia-Shen</p>

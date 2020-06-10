@@ -2,25 +2,88 @@
 <html>
 	<meta charset="utf-8">
 <head>
-	<title>杯可Backer</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+	<title>會員專區</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/goods.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/star.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		table {
+			text-align: center;
+			font-size: 20px;
+			margin-top: 20px;
+			margin: auto;
+			min-width: 400px;
+		}
+		table tr td {
+			padding-top: 5px;
+		}
+		.submit-set3 {
+			background-color: rgb(243,152,0);
+			border-radius: 5px;
+			border: 0;
+			float: right;
+			margin-top: 10px;
+			font-size: 15px;
+			height: 25px;
+			width: 70px;
+			color: white;
+		}
+	</style>
 </head>
 <body>
+	<script>
+		$(function (){
+			$('.change a').click(function (){
+				$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+			});
+		})
+		function start() {
+			document.getElementById('signform').style.display=""
+		}
+		function signclose() {
+			document.getElementById('signform').style.display="none"
+			document.getElementById('registerform').style.display="none"
+		}
+		function loading() {
+			document.getElementById('registerloading').style.display=""
+		}
+	</script>
 	<header id="header">
 		<div id="headset">
 			<div id="login_logout">
-				<form name="login" action="#">
-					<a href="#" style="color:black;">登入</a> / <a href="#" style="color:black;">登出</a>
-				</form>
+				<div>
+					<button id="displaysign" onclick="start()">登入/註冊</button>
+				</div>
+				<div class="signform" id="signform" style="display: none">
+					<div class="signclose">
+						<a onclick="signclose()">關閉</a>
+					</div>
+					<form action="#" method="post">
+						<div class="userdiv">
+							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="pwddiv">
+							<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="postdiv">
+							<button>登入</button><br>
+						</div><br>
+					</form>
+					<div class="change" style="color: #4d4d4d">
+						<a href="register.html" style="text-decoration: none;">註冊</a>
+					</div>
+				</div>
 			</div>
 			<div id="A">
 				<div id="B">
 					<ul>
-						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
-						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
-						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
-						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/hope.html" style="color:black;"><p>會員專區</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
 					</ul>
 				</div>
 			</div>
@@ -29,37 +92,66 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="../pages/list.html"><p>商品列表</p></a>
 			<a href="../pages/hot.html"><p>熱門排行</p></a>
-			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/hope.html"><p>會員專區</p></a>
 			<a href="../pages/cart.html"><p>購 物 車</p></a>
 			<a href="../pages/about.html"><p>關於我們</p></a>
 		</div>
 		<span style="font-size:50px;cursor:pointer" class="menu_click" onclick="openNav()">&#9776;</span>
 		<script>
-		function openNav() {document.getElementById("mySidenav").style.width = "250px";}
-		function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+			function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+			function closeNav() {document.getElementById("mySidenav").style.width = "0";}
 		</script>
 	</header>
 	<section>
 		<aside></aside>
-		<nav>
-			<div id="nav_div">
-				<ul align="left">
-					<li><a href="1.html" style="color:black">75% 摩卡生巧乳酪</a></li>
-					<li><a href="2.html" style="color:black">丸久小山園抹茶生巧乳酪</a></li>
-					<li><a href="3.html" style="color:black">日光。芋乳酪蛋糕</a></li>
-					<li><a href="7.html" style="color:black">奇幻旅程</a></li>
-					<li><a href="8.html" style="color:black">品好經典原味乳酪</a></li>
-					<li><a href="6.html" style="color:black">仲夏莓果</a></li>
-					<li><a href="4.html" style="color:black">巧克力手工餅乾</a></li>
-					<li><a href="5.html" style="color:black">玉米片手工餅乾</a></li>
-					<li><a href="9.html" style="color:black">帕瑪森迷迭香起司餅乾</a></li>
-					<li><a href="10.html" style="color:black">黑芝麻手工餅乾</a></li>
-					<li><a href="11.html" style="color:black">橘子手工餅乾</a></li>
-					<li><a href="12.html" style="color:black">覆盆莓餅乾</a></li>
-				</ul>
-			</div>
-		</nav>
-		<article></article>
+		<nav></nav>
+		<article>
+			<p style="font-size: 20px;padding: 10px;">會員專區</p>
+			<form action="#">
+				<table>
+					<tr>
+						<td colspan="2">帳號設定-密碼變更</td>
+					</tr>
+					<tr>
+						<td>原密碼</td>
+						<td><input type="text" name="" id=""></td>
+					</tr>
+					<tr>
+						<td>新密碼</td>
+						<td><input type="text" name="" id=""></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input class="submit-set3" type="submit" value="確認變更"></td>
+					</tr>
+				</table>
+			</form><br><br>
+			<form action="#">
+				<table style="border: solid white;border-width: 1px;">
+					<tr>
+						<td colspan="4">購物紀錄</td>
+					</tr>
+					<tr style="background-color: #999;border: solid white;color: white;height: 30px;">
+						<td>日期</td>
+						<td>商品</td>
+						<td>數量</td>
+						<td>金額</td>
+					</tr>
+					<tr>
+						<td>2020-06-10</td>
+						<td>75%摩卡生巧乳酪</td>
+						<td>2</td>
+						<td>800</td>
+					</tr>
+					<tr>
+						<td>2020-06-08</td>
+						<td>日光。芋乳酪蛋糕</td>
+						<td>3</td>
+						<td>1080</td>
+					</tr>
+				</table>
+			</form>
+		</article>
 	</section>
 	<footer id="footer">
 		<div id="footer_p">

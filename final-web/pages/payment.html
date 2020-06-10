@@ -8,68 +8,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
 </head>
 <body>
 	<div id="Main">
 		<header id="header">
 			<div id="headset">
 				<div id="login_logout">
-					<form name="login" action="#">
-						<script> 
-						function showDialog(){
-							var whitebg = document.getElementById("white-background");
-							var dlg = document.getElementById("dlgbox");
-							whitebg.style.display = "block";
-							dlg.style.display = "block";
-							var winWidth = window.innerWidth;
-							var winHeight = window.innerHeight;
-							dlg.style.left = (winWidth/2) - 480/2 + "px";
-							dlg.style.top = "150px";
-						}
-						function closeDialog(){
-							var whitebg = document.getElementById("white-background");
-							whitebg.style.display = "none";
-							var dlg = document.getElementById("dlgbox");
-							dlg.style.display="none";
-						}
-						</script>
-						<button id="button_in" onclick="showDialog()">登入 / 註冊</button>
-						<div id="white-background"><!--登入--></div>
-						<div id="dlgbox">
-							<div id="dlg-header">登入
-								<h3 onclick="closeDialog()" title="關閉視窗" class="close">x</h3>
+					<div>
+						<button id="displaysign" onclick="start()">登入/註冊</button>
+					</div>
+					<div class="signform" id="signform" style="display: none">
+						<div class="signclose">
+							<a onclick="signclose()">關閉</a>
+						</div>
+						<form action="#" method="post">
+							<div class="userdiv">
+								<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" onkeyup="value=value.replace(/[\W]/g,'') ">
 							</div>
-							<div id="dlg-body"><br/>
-								帳號：<input type="text" name="id_number" value="" placeholder=""> <br/><br/>
-								密碼：<input type="password" name="password" value="" placeholder=""><br/><br/>
+							<div class="pwddiv">
+								<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd" onkeyup="value=value.replace(/[\W]/g,'') ">
 							</div>
-							<div id="dlg-footer">
-								<input type="button" name="login" value="登入">
-								<input type="button" name="enroll" value="註冊">
-							</div>
-						</div><!--登入end-->
-						<div id="white-background"><!--登入介面始--></div>
-							<div id="dlgbox">
-							<div id="dlg-header">登入
-								<a href="index.html" title="關閉視窗" class="close"><input type="button" name="" value="×"></a>
-							</div>
-							<div id="dlg-body"><br/>
-								帳號：<input type="text" name="id_number"> <br/>
-								密碼：<input type="password" name="password"><br/>
-							</div>
-							<div id="dlg-footer">
-								<input type="button" name="login" value="登入">
-								<input type="button" name="enroll" value="註冊">
-							</div>
-						</div><!--登入介面終-->
-					</form>
+							<div class="postdiv">
+								<button>登入</button><br>
+							</div><br>
+						</form>
+						<div class="change" style="color: #4d4d4d">
+							<a href="register.html" style="text-decoration: none;">註冊</a>
+						</div>
+					</div>
 				</div>
 				<div id="A">
 					<div id="B">
 						<ul>
 							<li><a href="list.html" style="color:black;"><p>商品列表</p></a></li>
 							<li><a href="hot.html" style="color:black;"><p>熱門排行</p></a></li>
-							<li><a href="hope.html" style="color:black;"><p>願望清單</p></a></li>
+							<li><a href="hope.html" style="color:black;"><p>會員專區</p></a></li>
 							<li><a href="cart.html" style="color:black;"><p>購 物 車</p></a></li>
 							<li><a href="about.html" style="color:black;"><p>關於我們</p></a></li>
 						</ul>
@@ -80,7 +55,7 @@
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="list.html"><p>商品列表</p></a>
 				<a href="hot.html"><p>熱門排行</p></a>
-				<a href="hope.html"><p>願望清單</p></a>
+				<a href="hope.html"><p>會員專區</p></a>
 				<a href="cart.html"><p>購 物 車</p></a>
 				<a href="about.html"><p>關於我們</p></a>
 			</div>
@@ -95,7 +70,7 @@
 			<nav></nav>
 			<article>
 				<div id="posit">
-					<form name="form_pay"  id="form" action="mailto:ping2111m8@gmail.com" method="post" enctype="text/plain" onSubmit="return checkform(this)">
+					<form name="form_pay"  id="form" action="#" method="post" enctype="text/plain" onSubmit="return checkform(this)">
 						<table>
 							<tr>
 								<th width="90px"><p>收件人：</p></th>

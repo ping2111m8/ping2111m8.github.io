@@ -94,17 +94,18 @@
     .sidenav a {font-size: 18px;}
 }
 section{
-    height: 1200px;/*頁面高度*/
+    height: 150vh;/*頁面高度*/
     background-color: #FFF5C1;
+    position: relative;
 }
 aside{
-    height: 1200px;/*頁面高度*/
+    height: 150vh;/*頁面高度*/
     background-color: #FFED97;
     float: right;
     width: 200px;
 }
 nav{
-    height: 1200px;/*頁面高度*/
+    height: 150vh;/*頁面高度*/
     background-color: #FFED97;
     float: left;
     width: 210px;

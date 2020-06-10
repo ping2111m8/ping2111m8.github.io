@@ -9,16 +9,35 @@
 	<header id="header">
 		<div id="headset">
 			<div id="login_logout">
-				<form name="login" action="#">
-					<a href="#" style="color:black;">登入</a> / <a href="#" style="color:black;">登出</a>
-				</form>
+				<div>
+					<button id="displaysign" onclick="start()">登入/註冊</button>
+				</div>
+				<div class="signform" id="signform" style="display: none">
+					<div class="signclose">
+						<a onclick="signclose()">關閉</a>
+					</div>
+					<form action="#" method="post">
+						<div class="userdiv">
+							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="pwddiv">
+							<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="postdiv">
+							<button>登入</button><br>
+						</div><br>
+					</form>
+					<div class="change" style="color: #4d4d4d">
+						<a href="register.html" style="text-decoration: none;">註冊</a>
+					</div>
+				</div>
 			</div>
 			<div id="A">
 				<div id="B">
 					<ul>
 						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
 						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
+						<li><a href="../pages/hope.html" style="color:black;"><p>會員專區</p></a></li>
 						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
 						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
 					</ul>
@@ -29,7 +48,7 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="../pages/list.html"><p>商品列表</p></a>
 			<a href="../pages/hot.html"><p>熱門排行</p></a>
-			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/hope.html"><p>會員專區</p></a>
 			<a href="../pages/cart.html"><p>購 物 車</p></a>
 			<a href="../pages/about.html"><p>關於我們</p></a>
 		</div>

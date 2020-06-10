@@ -1,0 +1,118 @@
+<html>
+    <meta charset="utf-8">
+<head>
+    <title>後台管理</title>
+    <style>
+        body {
+            background-color: #FFED97;
+        }
+        fieldset {
+            border: solid #D29D00;
+            border-radius: 20px;
+            border-width: 10px;
+            font-family: "微軟正黑體";
+            font-size: 25px;
+            width: 500px;
+            margin: auto;
+            margin-top: 10px;
+            padding-top: 10px;
+            background-color: white;
+        }
+        fieldset legend {
+            background-color: white;
+            border: solid #D29D00;
+            border-radius: 10px;
+            border-width: 4px;
+        }
+        input[type="text"] {
+            border: solid #D29D00;
+            border-radius: 10px;
+            height: 27px;
+            margin-left: 10px;
+            background-color: white;
+            font-family: "微軟正黑體";
+            margin-bottom: -1px;
+        }
+        input[type="submit"] {
+            height: 35px;
+            font-size: 20px;
+            border: solid #D29D00;
+            border-radius: 10px;
+            font-family: "微軟正黑體";
+            float: right;
+            background-color: white;
+        }
+        form {
+            background-color: white;
+        }
+        p {
+            font-family: "微軟正黑體";
+            font-size: 30px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        table tr td {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p>杯可Backer後台管理頁面</p>
+    <fieldset>
+        <legend>新增商品</legend>
+        <form action="..\JSP\add.jsp" method="POST">
+            <table>
+                <tr>
+                    <td>商品名稱:</td>
+                    <td><input type="text" name="pname"></td>
+                </tr>
+                <tr>
+                    <td>單　　位:</td>
+                    <td><input type="text" name="num"></td>
+                </tr>
+                <tr>
+                    <td>單　　價:</td>
+                    <td><input type="text" name="cash"></td>
+                </tr>
+            </table>
+            <input type="submit" value="新增">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>修改商品</legend>
+        <form action="..\JSP\update.jsp" method="POST">
+            <table>
+                <tr>
+                    <td>原商品名稱:</td>
+                    <td><input type="text" name="pname"></td>
+                </tr>
+                <tr>
+                    <td>修改後名稱:</td>
+                    <td><input type="text" name="upname"></td>
+                </tr>
+                <tr>
+                    <td>單　　　位:</td>
+                    <td><input type="text" name="unum"></td>
+                </tr>
+                <tr>
+                    <td>單　　　價:</td>
+                    <td><input type="text" name="ucash"></td>
+                </tr>
+            </table>
+            <input type="submit" value="修改">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>刪除商品</legend>
+        <form action="..\JSP\delete.jsp" method="POST">
+            <table>
+                <tr>
+                    <td>商品名稱:</td>
+                    <td><input type="text" name="dpname"></td>
+                </tr>
+            </table>
+            <input type="submit" value="刪除">
+        </form>
+    </fieldset>
+</body>
+</html>
