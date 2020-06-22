@@ -2,30 +2,45 @@
 <html>
 	<meta charset="utf-8">
 <head>
-	<title>帕瑪森迷迭香起司餅乾</title>
+	<title>評論</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/goods.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/star.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		#comment {
+			width: 350px;
+			height: 70px;
+		}
+		#table_set4 {
+			width: 70px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		#table_position3 {
+			margin: auto;
+			padding-top: 20px;
+		}
+	</style>
 </head>
 <body>
 	<script>
-		$(function (){
-			$('.change a').click(function (){
-				$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
-			});
-		})
-		function start() {
-			document.getElementById('signform').style.display=""
-		}
-		function signclose() {
-			document.getElementById('signform').style.display="none"
-			document.getElementById('registerform').style.display="none"
-		}
-		function loading() {
-			document.getElementById('registerloading').style.display=""
-		}
+	$(function (){
+		$('.change a').click(function (){
+			$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+		});
+	})
+	function start() {
+		document.getElementById('signform').style.display=""
+	}
+	function signclose() {
+		document.getElementById('signform').style.display="none"
+		document.getElementById('registerform').style.display="none"
+	}
+	function loading() {
+		document.getElementById('registerloading').style.display=""
+	}
 	</script>
 	<header id="header">
 		<div id="headset">
@@ -61,7 +76,6 @@
 						<li><a style="text-decoration:none;color:black" href="../pages/hope.html" style="color:black;"><p>會員專區</p></a></li>
 						<li><a style="text-decoration:none;color:black" href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
 						<li><a style="text-decoration:none;color:black" href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
-						<li><a style="text-decoration:none;color:black" href="../pages/comment.html" style="color:black;"><p>商品評論</p></a></li>
 					</ul>
 				</div>
 			</div>
@@ -103,81 +117,67 @@
 			</div>
 		</nav>
 		<article>
-			<table id="table-set">
-				<tr>
-					<td>
-						<div class="first">
-							<div id="picture">
-								<img id="picture-set" src="../assets/pic/goods/9.jpg" width ="400px" height="400px">
-							</div>
-							<div id="first_left">
-								<label><p id="text_title">帕瑪森迷迭香起司餅乾</p></label><br>
-								<label id="text-set">NT.900</label><br>
-								<label id="text-set">庫存：</label>
-								<label id="text-set">30</label><br>
-								<div id="first_left_bottom">
-									<form action="#">
-										<table id="text-set">
-											<tr align="left">
-												<td>
-													下單數量：<input id="number-set" type="number" name="amount" value="1">　
-												</td>
-												<td><input id="submit-set"type="submit" value="下單"></td>
-											</tr>
-										</table>
-									</form>
-								</div>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td align="left">
-						<div class="second">
-							<label id="text_title">商品說明</label><p>
-							<label id="text-set2">
-								帕瑪森迷迭香起司餅乾</br>
-								美國原裝進口優質帕瑪森起司粉</br>
-                                與地中海風味迷迭香交會，有著濃郁起司風味</br>
-                                新鮮草料與純粹奶香的鹹口味餅乾。 </br>
-							</label>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="third">
-							<form action="#">
-								<table>
-									<tr align="left"><td colspan="5"><label id="text-set2">商品評價</label></td></tr>
-									<tr align="left"><td colspan="5"><label id="text_set3">如果喜歡我們的商品，請位我們好評，並留下評論</label></td></tr>
-									<tr>
-										<td id="text_set3">暱稱：</td>
-										<td align="left"><input id="namebox" type="text" name="name" placeholder="輸入暱稱"></td>
-										<td id="text_set3" colspan="1">　星星數：</td>
-										<td>
-											<div class="rating">
-												<input type="radio" name="star" id="star1"><label for="star1"></label>
-												<input type="radio" name="star" id="star2"><label for="star2"></label>
-												<input type="radio" name="star" id="star3"><label for="star3"></label>
-												<input type="radio" name="star" id="star4"><label for="star4"></label>
-												<input type="radio" name="star" id="star5"><label for="star5"></label>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td id="text_set3">評論：</td>
-										<td colspan="3" align="left">
-											<textarea id="comment" placeholder="輸入評論"></textarea>
-											<input id="submit-set" type="submit" value="送出">
-										</td>
-									</tr>
-								</table>
-							</form>
-						</div>
-					</td>
-				</tr>
-			</table>
+			<form action="#">
+                <table id="table_position3">
+                    <tr align="center"><td colspan="4"><label id="text-set2">商品評價</label></td></tr>
+                    <tr>
+                        <td id="text_set3">暱稱：</td>
+                        <td align="left" id="table_set4">
+							<input id="namebox" style="font-size: 20px;" type="text" value="小猴猴">
+						</td>
+                        <td align="center" id="text_set3">星星數：</td>
+                        <td>3★</td>
+                    </tr>
+                    <tr>
+                        <td id="text_set3">評論：</td>
+                        <td colspan="3" align="left">
+                            <textarea id="comment" style="font-size: 20px;">我覺得很普通ㄟ，給3星算不錯了</textarea>
+                        </td>
+					</tr>
+					<tr>
+                        <td id="text_set3">暱稱：</td>
+                        <td align="left" id="table_set4">
+							<input id="namebox" style="font-size: 20px;" type="text" value="凱文">
+						</td>
+                        <td align="center" id="text_set3">星星數：</td>
+                        <td>5★</td>
+                    </tr>
+                    <tr>
+                        <td id="text_set3">評論：</td>
+                        <td colspan="3" align="left">
+                            <textarea id="comment" style="font-size: 20px;">加油好嗎對自己要有信心</textarea>
+                        </td>
+					</tr>                    
+					<tr>
+                        <td id="text_set3">暱稱：</td>
+                        <td align="left" id="table_set4">
+							<input id="namebox" style="font-size: 20px;" type="text" value="比猴">
+						</td>
+                        <td align="center" id="text_set3">星星數：</td>
+                        <td>1★</td>
+                    </tr>
+                    <tr>
+                        <td id="text_set3">評論：</td>
+                        <td colspan="3" align="left">
+                            <textarea id="comment" style="font-size: 20px;">啊為什麼我一定只能給1星，沒有沒有負的可以按</textarea>
+                        </td>
+					</tr>
+					<tr>
+                        <td id="text_set3">暱稱：</td>
+                        <td align="left" id="table_set4">
+							<input id="namebox" style="font-size: 20px;" type="text" value="彥綸">
+						</td>
+                        <td align="center" id="text_set3">星星數：</td>
+                        <td>4★</td>
+                    </tr>
+                    <tr>
+                        <td id="text_set3">評論：</td>
+                        <td colspan="3" align="left">
+                            <textarea id="comment" style="font-size: 20px;">好啦加油~!</textarea>
+                        </td>
+					</tr>
+                </table>
+            </form>
 		</article>
 	</section>
 	<footer id="footer">

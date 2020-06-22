@@ -4,24 +4,64 @@
 <head>
 	<title>杯可Backer</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/hot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/hot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/goods.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/log2.css">
 </head>
 <body>
+	<script>
+		$(function (){
+			$('.change a').click(function (){
+				$('.signform').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+			});
+		})
+		function start() {
+			document.getElementById('signform').style.display=""
+		}
+		function signclose() {
+			document.getElementById('signform').style.display="none"
+			document.getElementById('registerform').style.display="none"
+		}
+		function loading() {
+			document.getElementById('registerloading').style.display=""
+		}
+	</script>
 	<header id="header">
 		<div id="headset">
 			<div id="login_logout">
-				<form name="login" action="#">
-					<a href="#" style="color:black;">登入</a> / <a href="#" style="color:black;">登出</a>
-				</form>
+				<div>
+					<button id="displaysign" onclick="start()">登入/註冊</button>
+				</div>
+				<div class="signform" id="signform" style="display: none">
+					<div class="signclose">
+						<a onclick="signclose()">關閉</a>
+					</div>
+					<form action="#" method="post">
+						<div class="userdiv">
+							<input id="user" class="signinput" type="text" placeholder="使用者名稱" name="user" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="pwddiv">
+							<input id="pwd" class="signinput" type="password" placeholder="密碼" name="pwd" onkeyup="value=value.replace(/[\W]/g,'') ">
+						</div>
+						<div class="postdiv">
+							<button>登入</button><br>
+						</div><br>
+					</form>
+					<div class="change" style="color: #4d4d4d">
+						<a href="register.html" style="text-decoration: none;">註冊</a>
+					</div>
+				</div>
 			</div>
 			<div id="A">
 				<div id="B">
 					<ul>
-						<li><a href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
-						<li><a href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
-						<li><a href="../pages/hope.html" style="color:black;"><p>願望清單</p></a></li>
-						<li><a href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
-						<li><a href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/list.html" style="color:black;"><p>商品列表</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/hot.html" style="color:black;"><p>熱門排行</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/hope.html" style="color:black;"><p>會員專區</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/cart.html" style="color:black;"><p>購 物 車</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/about.html" style="color:black;"><p>關於我們</p></a></li>
+						<li><a style="text-decoration:none;color:black" href="../pages/comment.html" style="color:black;"><p>商品評論</p></a></li>
 					</ul>
 				</div>
 			</div>
@@ -30,7 +70,7 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="../pages/list.html"><p>商品列表</p></a>
 			<a href="../pages/hot.html"><p>熱門排行</p></a>
-			<a href="../pages/hope.html"><p>願望清單</p></a>
+			<a href="../pages/hope.html"><p>會員專區</p></a>
 			<a href="../pages/cart.html"><p>購 物 車</p></a>
 			<a href="../pages/about.html"><p>關於我們</p></a>
 		</div>
@@ -44,20 +84,22 @@
 		<aside></aside>
 		<nav>
 			<div id="nav_div">
-				<ul align="left">
-					<li><a href="1.html" style="color:black">75% 摩卡生巧乳酪</a></li>
-					<li><a href="2.html" style="color:black">丸久小山園抹茶生巧乳酪</a></li>
-					<li><a href="3.html" style="color:black">日光。芋乳酪蛋糕</a></li>
-					<li><a href="7.html" style="color:black">奇幻旅程</a></li>
-					<li><a href="8.html" style="color:black">品好經典原味乳酪</a></li>
-					<li><a href="6.html" style="color:black">仲夏莓果</a></li>
-					<li><a href="4.html" style="color:black">巧克力手工餅乾</a></li>
-					<li><a href="5.html" style="color:black">玉米片手工餅乾</a></li>
-					<li><a href="9.html" style="color:black">帕瑪森迷迭香起司餅乾</a></li>
-					<li><a href="10.html" style="color:black">黑芝麻手工餅乾</a></li>
-					<li><a href="11.html" style="color:black">橘子手工餅乾</a></li>
-					<li><a href="12.html" style="color:black">覆盆莓餅乾</a></li>
-				</ul>
+				<div id="C">
+					<ul align="left">
+						<li><a style="text-decoration:none;color:black;" href="1.html" style="color:black">75% 摩卡生巧乳酪</a></li>
+						<li><a style="text-decoration:none;color:black;" href="2.html" style="color:black">丸久小山園抹茶生巧乳酪</a></li>
+						<li><a style="text-decoration:none;color:black;" href="3.html" style="color:black">日光。芋乳酪蛋糕</a></li>
+						<li><a style="text-decoration:none;color:black;" href="7.html" style="color:black">奇幻旅程</a></li>
+						<li><a style="text-decoration:none;color:black;" href="8.html" style="color:black">品好經典原味乳酪</a></li>
+						<li><a style="text-decoration:none;color:black;" href="6.html" style="color:black">仲夏莓果</a></li>
+						<li><a style="text-decoration:none;color:black;" href="4.html" style="color:black">巧克力手工餅乾</a></li>
+						<li><a style="text-decoration:none;color:black;" href="5.html" style="color:black">玉米片手工餅乾</a></li>
+						<li><a style="text-decoration:none;color:black;" href="9.html" style="color:black">帕瑪森迷迭香起司餅乾</a></li>
+						<li><a style="text-decoration:none;color:black;" href="10.html" style="color:black">黑芝麻手工餅乾</a></li>
+						<li><a style="text-decoration:none;color:black;" href="11.html" style="color:black">橘子手工餅乾</a></li>
+						<li><a style="text-decoration:none;color:black;" href="12.html" style="color:black">覆盆莓餅乾</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<article>
@@ -66,37 +108,37 @@
 					<td id="text-set3" colspan="3">熱門蛋糕系列</td>
 				</tr>
 				<tr>
-					<td id="color-set"><a href="1.html" style="color: white;">第一名</a></td>
-					<td id="color-set"><a href="2.html" style="color: white;">第二名</a></td>
-					<td id="color-set"><a href="7.html" style="color: white;">第三名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="1.html" style="color: white;">第一名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="2.html" style="color: white;">第二名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="7.html" style="color: white;">第三名</a></td>
 				</tr>
 				<tr>
-					<td><a href="1.html"><img src="../assets/pic/goods/1.jpg" width ="200px"></a></td>
-					<td><a href="2.html"><img src="../assets/pic/goods/2.jpg" width ="200px"></a></td>
-					<td><a href="7.html"><img src="../assets/pic/goods/7.jpg" width ="200px"></a></td>
+					<td align="center"><a href="1.html"><img src="../assets/pic/goods/1.jpg" width ="200px"></a></td>
+					<td align="center"><a href="2.html"><img src="../assets/pic/goods/2.jpg" width ="200px"></a></td>
+					<td align="center"><a href="7.html"><img src="../assets/pic/goods/7.jpg" width ="200px"></a></td>
 				</tr>
 				<tr>
-					<td><a href="1.html">75% 摩卡生巧乳酪</a></td>
-					<td><a href="2.html">丸久小山園抹茶生巧乳酪</a></td>
-					<td><a href="7.html">奇幻旅程</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="1.html">75% 摩卡生巧乳酪</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="2.html">丸久小山園抹茶生巧乳酪</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="7.html">奇幻旅程</a></td>
 				</tr>
                 <tr align="left">
 					<td id="text-set3" colspan="3">熱門餅乾系列</td>
 				</tr>
 				<tr>
-					<td id="color-set"><a href="4.html" style="color: white;">第一名</a></td>
-					<td id="color-set"><a href="10.html" style="color: white;">第二名</a></td>
-					<td id="color-set"><a href="12.html" style="color: white;">第三名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="4.html" style="color: white;">第一名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="10.html" style="color: white;">第二名</a></td>
+					<td align="center"id="color-set"><a style="text-decoration:none;color:white" href="12.html" style="color: white;">第三名</a></td>
 				</tr>
 				<tr>
-					<td><a href="4.html"><img src="../assets/pic/goods/4.jpg" width ="200px"></a></td>
-					<td><a href="10.html"><img src="../assets/pic/goods/10.jpg" width ="200px"></a></td>
-					<td><a href="12.html"><img src="../assets/pic/goods/12.jpg" width ="200px"></a></td>
+					<td align="center"><a href="4.html"> <img src="../assets/pic/goods/4.jpg" width ="200px"></a></td>
+					<td align="center"><a href="10.html"><img src="../assets/pic/goods/10.jpg" width ="200px"></a></td>
+					<td align="center"><a href="12.html"><img src="../assets/pic/goods/12.jpg" width ="200px"></a></td>
 				</tr>
                 <tr>
-					<td><a href="4.html">巧克力手工餅乾</a></td>
-					<td><a href="10.html">黑芝麻手工餅乾</a></td>
-					<td><a href="12.html">覆盆莓餅乾</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="4.html">巧克力手工餅乾</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="10.html">黑芝麻手工餅乾</a></td>
+					<td align="center"><a style="text-decoration:none;color:black" href="12.html">覆盆莓餅乾</a></td>
 				</tr>
             </table>
         </article>
